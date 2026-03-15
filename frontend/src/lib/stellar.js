@@ -67,7 +67,7 @@ export async function sendTip(tipper, amountXlm, message) {
     StellarSdk.Address.fromString(tipper).toScVal(),
     StellarSdk.Address.fromString(CONTRACT_ID).toScVal(),
     new StellarSdk.XdrLargeInt('i128', BigInt(stroops)).toI128(),
-    StellarSdk.xdr.ScVal.scvU32(99_999_999),
+    StellarSdk.xdr.ScVal.scvU32(3_110_400),
   ))
   return sendTx(tipper, tc().call(
     'tip',
